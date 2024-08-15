@@ -13,7 +13,14 @@ def clas(elen):
     return render (elen,"class.html")
 
 
-
+def copy_li_fun(element):
+    copy_li = [
+        {"name":"Home","url":"index","active":True},
+        {"name":"About","url":"about","active":True},
+        {"name":"Class","url":"class","active":True},
+        {"name":"Blog","url":"blog","active":True},
+    ]
+    return render(element,"index.html",{"copy_li":copy_li})
 
 def copy_blog_fun(element):
     copy_blog = [
