@@ -73,19 +73,10 @@
 
                     <ul class="navbar-nav">
                       {% for item in copy_li %}
-                      <li class="nav-item active">
-                        <a class="nav-link" href="{% url 'index' %}">{{item.name}} <span class="sr-only">(current)</span></a>
+                      <li class="nav-item {% if item.active %} active {% endif %}">
+                        <a class="nav-link" href="{{item.url}}">{{item.name}}{% if item.active %} <span class="sr-only">(current)</span> {% endif %} </a>
                       </li>
                       {% endfor %}
-                      <!-- <li class="nav-item">
-                        <a class="nav-link" href="{% url 'about' %}"> About </a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="{% url 'class' %}"> Classes </a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="{% url 'blog' %}">Blog</a>
-                      </li> -->
                     </ul>
 
 
