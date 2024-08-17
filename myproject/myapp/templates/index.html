@@ -109,15 +109,10 @@
                 {% for item in copy_header %}
                   <li data-target="#carouselExampleIndicators" data-slide-to="0" class="{% if item.active %} active {% endif %}">{{item.number}}</li>
                 {% endfor %}
-
               </ol>
-
-
-
               <div class="carousel-inner">
-
                 {% for item in copy_header %}
-                <div class="carousel-item active">
+                <div class="carousel-item {% if item.active %} active{% endif %}">
                   <div class="box">
                     <div class="detail-box">
                       <h1>
@@ -134,12 +129,6 @@
                   </div>
                 </div>
                 {% endfor %}
-
-
-
-
-
-
               </div>
               <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                 <span class="sr-only">Previous</span>
@@ -210,7 +199,61 @@
             </div>
             <div class="class_box-container">
               <div class="owl-carousel owl_carousel1">
+
+
+
+
+                <!-- <div class="item">
+                  <div class="box">
+                    <div class="img-box">
+                      <img src="{% static 'images/c1.jpg' %}" alt="">
+                      <div class="detail-box">
+                        <button>
+                          <img src="{% static 'images/play-icon.png' %}" alt="">
+                        </button>
+                        <h2>
+                          Boxing
+                        </h2>
+                      </div>
+                    </div>
+                    <div class="btn-box">
+                      <a href="">
+                        See More
+                      </a>
+                    </div>
+                  </div>
+                </div> -->
+
+
+
+                {% for item in copy_class %}
                 <div class="item">
+                  <div class="box">
+                    <div class="img-box">
+                      <img src="{{item.img}}" alt="">
+                      <div class="detail-box">
+                        <button>
+                          <img src="{% static 'images/play-icon.png' %}" alt="">
+                        </button>
+                        <h2>
+                          {{item.name}}
+                        </h2>
+                      </div>
+                    </div>
+                    <div class="btn-box">
+                      <a href="">
+                        See More
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                {% endfor %}
+
+
+
+
+
+                <!-- <div class="item">
                   <div class="box">
                     <div class="img-box">
                       <img src="{% static 'images/c1.jpg' %}" alt="">
@@ -249,47 +292,7 @@
                       </a>
                     </div>
                   </div>
-                </div>
-                <div class="item">
-                  <div class="box">
-                    <div class="img-box">
-                      <img src="{% static 'images/c1.jpg' %}" alt="">
-                      <div class="detail-box">
-                        <button>
-                          <img src="{% static 'images/play-icon.png' %}" alt="">
-                        </button>
-                        <h2>
-                          Boxing
-                        </h2>
-                      </div>
-                    </div>
-                    <div class="btn-box">
-                      <a href="">
-                        See More
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="item">
-                  <div class="box">
-                    <div class="img-box">
-                      <img src="{% static 'images/c2.jpg' %}" alt="">
-                      <div class="detail-box">
-                        <button>
-                          <img src="{% static 'images/play-icon.png' %}" alt="">
-                        </button>
-                        <h2>
-                          Boxing
-                        </h2>
-                      </div>
-                    </div>
-                    <div class="btn-box">
-                      <a href="">
-                        See More
-                      </a>
-                    </div>
-                  </div>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>
@@ -318,9 +321,6 @@
         </div>
       </div>
       <div class="row">
-
-
-
         {% for item in copy_blog %}
         <div class="col-md-6 pl-0">
           <div class="box b1">

@@ -37,6 +37,10 @@ def copy_fun(element):
         {"number":2,"active":False},
         {"number":3,"active":False},
     ]
+    copy_class = [
+        {"img":"static/images/c1.jpg","name":"Boxing","active":True},
+        {"img":"static/images/c2.jpg","name":"Bexruz","active":True},
+    ]
     
-    copy_return = {"copy_li":copy_li,"copy_blog":copy_blog,"copy_header":copy_header}
+    copy_return = {"copy_li":copy_li,"copy_blog":copy_blog,"copy_header":copy_header,"copy_class":copy_class}
     return render(element, "index.html",copy_return)
