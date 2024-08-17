@@ -32,6 +32,11 @@ def copy_fun(element):
         {"img":"static/images/b1.jpg","age":17,"name":"Fed","profi":"Boxer Joniya Daro","active":True},
         {"img":"static/images/b2.jpg","age":27,"name":"Jun","profi":"Boxer Joniya Daro","active":True},
     ]
+    copy_header = [
+        {"number":1,"active":True},
+        {"number":2,"active":False},
+        {"number":3,"active":False},
+    ]
     
-    copy_return = {"copy_li":copy_li,"copy_blog":copy_blog}
+    copy_return = {"copy_li":copy_li,"copy_blog":copy_blog,"copy_header":copy_header}
     return render(element, "index.html",copy_return)
